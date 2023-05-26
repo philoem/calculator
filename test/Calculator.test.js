@@ -8,8 +8,8 @@ contract('Calculator', async function(accounts) {
   })
   it('subtracts two numbers', async function() {
     const contract = await Calculator.deployed();
-    const result = await contract.subtract(1, 2, {from: accounts[0]});
-    assert.equal(result, -1, 'Not equal to -1');
+    const result = await contract.subtract(2, 1, {from: accounts[0]});
+    assert.equal(result, 1, 'Not equal to 1');
   })
   it('multiplies two numbers', async function() {
     const contract = await Calculator.deployed();
@@ -18,7 +18,7 @@ contract('Calculator', async function(accounts) {
   })
   it('divides two numbers', async function() {
     const contract = await Calculator.deployed();
-    const result = await contract.divide(1, 2, {from: accounts[0]});
-    assert.equal(result, 0.5, 'Not equal to 0.5');
+    const result = await contract.divide(5, 2, {from: accounts[0]});
+    assert.equal(result, 2,5, 'Not equal to 2,5');
   })
 })
